@@ -10,13 +10,13 @@
 <meta name="keywords" content="Canada immigration calculator, Express Entry CRS score calculator, BC PNP score calculator, SIRS score BC PNP, Canadian citizenship physical presence calculator, Canada PR calculator 2026, how to immigrate to Canada, BC PNP 2026, Express Entry 2026, Canada immigration guide, PNP score estimator, Canadian permanent residence, IRCC calculator, CRS points calculator, immigration to British Columbia">
 <meta name="author" content="Egcellent Life Solutions">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://egcellentlifesolutions.com/canada-immigration-calculator">
+<link rel="canonical" href="https://canadacalculator.egcellentlifesolutions.com">
 
 <!-- ══ OPEN GRAPH (Facebook, LinkedIn, iMessage previews) ══ -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Canada Immigration Calculator 2026 – CRS, BC PNP & Citizenship">
 <meta property="og:description" content="Instantly estimate your Express Entry CRS score, BC PNP SIRS score, and Canadian citizenship physical presence days. Free tool updated for 2026. Powered by Egcellent Life Solutions.">
-<meta property="og:url" content="https://egcellentlifesolutions.com/canada-immigration-calculator">
+<meta property="og:url" content="https://canadacalculator.egcellentlifesolutions.com">
 <meta property="og:site_name" content="Egcellent Life Solutions">
 <meta property="og:image" content="https://egcellentlifesolutions.com/cdn/shop/files/Egcellent_Final_Full_Color.png?v=1769555599&width=500">
 <meta property="og:image:width" content="1200">
@@ -33,14 +33,14 @@
 <meta name="geo.region" content="CA-BC">
 <meta name="geo.placename" content="British Columbia, Canada">
 
-<!-- ══ STRUCTURED DATA — WebApplication (Google Rich Results) ══ -->
+<!-- ══ STRUCTURED DATA — WebApplication ══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Canada Immigration Calculator 2026",
   "description": "Free tool to calculate your Express Entry CRS score, BC PNP SIRS score, and Canadian citizenship physical presence days. Updated 2026.",
-  "url": "https://egcellentlifesolutions.com/canada-immigration-calculator",
+  "url": "https://canadacalculator.egcellentlifesolutions.com",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "All",
   "offers": {
@@ -71,7 +71,7 @@
 }
 </script>
 
-<!-- ══ STRUCTURED DATA — FAQPage (Google FAQ rich snippets) ══ -->
+<!-- ══ STRUCTURED DATA — FAQPage ══ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -685,7 +685,7 @@ footer a{color:#b2dfdb;}
       <div style="font-size:2rem;flex-shrink:0;">✉️</div>
       <div>
         <div style="font-size:.78rem;font-weight:700;color:var(--teal2);margin-bottom:.2rem;">Email Us</div>
-        <a href="/cdn-cgi/l/email-protection#c0b4a5a1ad80a5a7a3a5acaca5aeb4aca9a6a5b3afacb5b4a9afaeb3eea3afad" style="font-size:.9rem;font-weight:600;color:var(--teal2);text-decoration:underline;"><span class="__cf_email__" data-cfemail="a1d5c4c0cce1c4c6c2c4cdcdc4cfd5cdc8c7c4d2cecdd4d5c8cecfd28fc2cecc">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#196d7c7874597c7e7a7c75757c776d75707f7c6a76756c6d7076776a377a7674" style="font-size:.9rem;font-weight:600;color:var(--teal2);text-decoration:underline;"><span class="__cf_email__" data-cfemail="087c6d6965486d6f6b6d64646d667c64616e6d7b67647d7c6167667b266b6765">[email&#160;protected]</span></a>
       </div>
     </div>
 
@@ -1105,7 +1105,11 @@ function calcEE(){
  const tr=(l,v,sub)=>`<tr${sub?' class="grp-r"':''}><td>${l}</td><td>${v}</td></tr>`;
  let rows='';
  rows+=tr('A. Core / Human Capital',core,true);
- rows+=tr('CRS – Human Capital – n Work Experience',cwe);
+ rows+=tr('CRS – Human Capital – Age',age);
+ rows+=tr('CRS – Human Capital – Level of Education',edu);
+ rows+=tr('CRS – First Language (4 abilities, max '+(s?128:136)+')',l1);
+ rows+=tr('CRS – Second Language (4 abilities, max '+(s?22:24)+')',l2);
+ rows+=tr('CRS – Human Capital – Canadian Work Experience',cwe);
  rows+=tr('B. Spouse / Partner Factors',sp,true);
  rows+=tr('CRS – Spouse – Level of Education',sp_edu);
  rows+=tr('CRS – Spouse – First Language (4 abilities)',sp_l1);
@@ -1450,10 +1454,4 @@ function ppReset(){
   document.title = 'Canada PR Score Calculator \u2013 PNP & Express Entry ' + year;
 
   // Meta description
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if(metaDesc) metaDesc.setAttribute('content',
-    'Free Canada immigration score calculator. Estimate your BC PNP SIRS score and Express Entry CRS score instantly. Updated ' + monthYear + '.');
-})();
-</script>
-</body>
-</html>
+  const metaDesc = document.quer
