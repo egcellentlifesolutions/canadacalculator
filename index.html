@@ -140,12 +140,12 @@ a:hover{text-decoration:underline;}
 #master-sticky{position:fixed;top:0;left:0;right:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.12);}
 #sticky-spacer{display:block;}
 
-.site-header{background:var(--teal);color:#fff;}
+.site-header{background:#fff;color:var(--blk);border-bottom:1px solid var(--grl);}
 .header-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
 .logo{display:flex;align-items:center;gap:.6rem;}
-.logo-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;background:#fff;}
-.logo-text{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.1;}
-.logo-sub{font-size:.65rem;opacity:.7;letter-spacing:.3px;}
+.logo-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;background:var(--teal);}
+.logo-text{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.1;color:var(--blk);}
+.logo-sub{font-size:.65rem;opacity:.6;letter-spacing:.3px;color:var(--blk);}
 .hdr-badge{display:flex;flex-direction:column;align-items:center;gap:0;background:#FFF3E0;border-radius:6px;overflow:hidden;font-size:.65rem;flex-shrink:0;}
 .hdr-badge-pill{background:#E65100;color:#fff;font-weight:700;font-size:.62rem;letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;white-space:nowrap;width:100%;text-align:center;}
 .hdr-badge-text{color:#BF360C;font-weight:500;padding:3px 10px;font-size:.6rem;white-space:nowrap;text-align:center;}
@@ -337,11 +337,11 @@ footer a{color:#b2dfdb;}
 .hdr-sponsor{display:flex;flex-direction:column;align-items:center;gap:.25rem;text-decoration:none;transition:opacity .15s;}
 .hdr-sponsor:hover{opacity:.82;}
 .hdr-sponsor-img{height:40px;width:auto;max-width:180px;object-fit:contain;}
-.hdr-sponsor-fallback{font-size:.72rem;font-weight:700;color:#fff;line-height:1.2;text-align:center;}
+.hdr-sponsor-fallback{font-size:.72rem;font-weight:700;color:var(--teal2);line-height:1.2;text-align:center;}
 .hdr-sponsor-divider{display:none;}
 .hdr-sponsor-copy{display:none;}
 .hdr-sponsor-headline{display:none;}
-.hdr-sponsor-url{font-size:.58rem;color:rgba(255,255,255,.6);letter-spacing:.3px;text-align:center;}
+.hdr-sponsor-url{font-size:.58rem;color:var(--gr);letter-spacing:.3px;text-align:center;}
 .hdr-sponsor-cta{display:none;}
 @media(max-width:600px){.hdr-sponsor{display:none;}}
 
@@ -573,7 +573,7 @@ footer a{color:#b2dfdb;}
   <div class="left-col">
     <div class="ee-hdr">
       <h2>🇨🇦 CRS — Comprehensive Ranking System (Express Entry)</h2>
-      <p>Official IRCC CRS grid. Max 1,200 pts. Job offer points removed Mar 25, 2025. Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank">canada.ca/crs-criteria ↗</a></p>
+      <p>Official IRCC CRS grid. Max 1,200 pts. Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank">canada.ca/crs-criteria ↗</a></p>
     </div>
     <div style="background:#E0F2F1;border:1px solid var(--grl);border-top:none;padding:.5rem .95rem;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
       <span style="font-size:.75rem;font-weight:600;color:var(--teal2);">Accompanying spouse or common-law partner?</span>
@@ -620,12 +620,8 @@ footer a{color:#b2dfdb;}
              data-full-width-responsive="false"></ins>
       </div>
     </div>
-    <div class="native-ad">
-      <div class="native-ad-tag">Sponsored Recommendation</div>
-      <div class="native-ad-icon">🎯</div>
-      <div class="native-ad-title">Improve Your CRS Score</div>
-      <div class="native-ad-desc">Language coaching, ECA assessments, and PNP pathways can significantly boost your score. A licensed consultant can map your fastest route to PR.</div>
-      <div class="native-ad-cta">Get a Free CRS Review ↗</div>
+    <div style="background:#E0F2F1;border-left:4px solid var(--teal);border-radius:8px;padding:.8rem 1rem;font-size:.74rem;color:#004D40;line-height:1.7;">
+      💡 <strong>Important Reminder:</strong> Always consult with a licensed immigration consultant to ensure eligibility and to avoid misrepresentation.
     </div>
     <button class="reset-btn" onclick="resetCalc('ee')">↺ Reset CRS Score</button>
     <p style="font-size:.62rem;color:var(--gr);text-align:center;line-height:1.6;">No job offer bonus since Mar 2025. Verify at <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank">canada.ca ↗</a></p>
