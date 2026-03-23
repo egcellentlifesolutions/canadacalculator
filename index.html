@@ -146,9 +146,9 @@ a:hover{text-decoration:underline;}
 .logo-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;background:#fff;}
 .logo-text{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.1;}
 .logo-sub{font-size:.65rem;opacity:.7;letter-spacing:.3px;}
-.hdr-badge{display:flex;align-items:center;gap:0;background:#FFF3E0;border-radius:6px;overflow:hidden;font-size:.65rem;white-space:nowrap;flex-shrink:0;}
-.hdr-badge-pill{background:#E65100;color:#fff;font-weight:700;font-size:.62rem;letter-spacing:.4px;text-transform:uppercase;padding:5px 10px;white-space:nowrap;}
-.hdr-badge-text{color:#BF360C;font-weight:500;padding:0 10px 0 6px;}
+.hdr-badge{display:flex;flex-direction:column;align-items:center;gap:0;background:#FFF3E0;border-radius:6px;overflow:hidden;font-size:.65rem;flex-shrink:0;}
+.hdr-badge-pill{background:#E65100;color:#fff;font-weight:700;font-size:.62rem;letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;white-space:nowrap;width:100%;text-align:center;}
+.hdr-badge-text{color:#BF360C;font-weight:500;padding:3px 10px;font-size:.6rem;white-space:nowrap;text-align:center;}
 @media(max-width:700px){.hdr-badge-text{display:none;}}
 @media(max-width:480px){.hdr-badge{display:none;}}
 
@@ -334,17 +334,15 @@ footer a{color:#b2dfdb;}
 .thankyou-bar{background:#E0F2F1;border-bottom:1px solid #B2DFDB;text-align:center;padding:.45rem 1.5rem;font-size:.76rem;color:#004D40;font-weight:500;letter-spacing:.2px;}
 
 /* ── HEADER INLINE SPONSOR ── */
-.hdr-sponsor{display:flex;align-items:center;gap:.55rem;text-decoration:none;background:rgba(255,255,255,.97);border-radius:8px;padding:.35rem .7rem .35rem .5rem;flex-shrink:0;transition:box-shadow .15s;}
-.hdr-sponsor:hover{box-shadow:0 2px 10px rgba(0,0,0,.15);}
-.hdr-sponsor-img{height:38px;width:auto;max-width:150px;object-fit:contain;}
-.hdr-sponsor-fallback{font-size:.72rem;font-weight:700;color:var(--blk);line-height:1.2;}
-.hdr-sponsor-divider{width:1px;height:28px;background:#ddd;flex-shrink:0;}
-.hdr-sponsor-copy{display:flex;flex-direction:column;gap:1px;}
-.hdr-sponsor-headline{font-size:.72rem;font-weight:700;color:var(--blk);line-height:1.2;white-space:nowrap;}
-.hdr-sponsor-url{font-size:.58rem;color:var(--gr);letter-spacing:.2px;}
-.hdr-sponsor-cta{background:transparent;border:1.5px solid var(--teal);border-radius:20px;padding:.22rem .7rem;font-size:.66rem;font-weight:600;color:var(--teal);white-space:nowrap;margin-left:.2rem;}
-.hdr-sponsor:hover .hdr-sponsor-cta{background:var(--teal);color:#fff;}
-@media(max-width:900px){.hdr-sponsor-copy{display:none;}.hdr-sponsor-divider{display:none;}}
+.hdr-sponsor{display:flex;flex-direction:column;align-items:center;gap:.25rem;text-decoration:none;transition:opacity .15s;}
+.hdr-sponsor:hover{opacity:.82;}
+.hdr-sponsor-img{height:40px;width:auto;max-width:180px;object-fit:contain;}
+.hdr-sponsor-fallback{font-size:.72rem;font-weight:700;color:#fff;line-height:1.2;text-align:center;}
+.hdr-sponsor-divider{display:none;}
+.hdr-sponsor-copy{display:none;}
+.hdr-sponsor-headline{display:none;}
+.hdr-sponsor-url{font-size:.58rem;color:rgba(255,255,255,.6);letter-spacing:.3px;text-align:center;}
+.hdr-sponsor-cta{display:none;}
 @media(max-width:600px){.hdr-sponsor{display:none;}}
 
 
@@ -373,21 +371,16 @@ footer a{color:#b2dfdb;}
         <div class="logo-sub">CRS · PNP · Citizenship Calculator</div>
       </div>
     </div>
-    <!-- Egcellent sponsor — inline in header -->
+    <!-- Egcellent sponsor — centered in header -->
     <a href="https://egcellentlifesolutions.com" target="_blank" class="hdr-sponsor">
       <img src="https://egcellentlifesolutions.com/cdn/shop/files/Egcellent_Final_Full_Color.png?v=1769555599&width=500"
            alt="Egcellent Life Solutions"
            class="hdr-sponsor-img"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span class="hdr-sponsor-fallback" style="display:none;">EGCELLENT<br><small>Life Solutions</small></span>
-      <span class="hdr-sponsor-divider"></span>
-      <span class="hdr-sponsor-copy">
-        <span class="hdr-sponsor-headline">Your Canadian Life Solutions Partner</span>
-        <span class="hdr-sponsor-url">egcellentlifesolutions.com</span>
-      </span>
-      <span class="hdr-sponsor-cta">Visit Us ↗</span>
+      <span class="hdr-sponsor-url">egcellentlifesolutions.com</span>
     </a>
-    <div class="hdr-badge"><span class="hdr-badge-pill">⚠ NOT AN OFFICIAL GOVERNMENT WEBSITE</span><span class="hdr-badge-text">· Not affiliated with IRCC, PNP, or any provincial authority</span></div>
+    <div class="hdr-badge"><span class="hdr-badge-pill">⚠ NOT AN OFFICIAL GOVERNMENT WEBSITE</span><span class="hdr-badge-text">Not affiliated with IRCC, PNP, or any provincial authority</span></div>
   </div>
 </div>
 
