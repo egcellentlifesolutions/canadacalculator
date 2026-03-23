@@ -136,6 +136,10 @@ a:hover{text-decoration:underline;}
 .ad-sticky-bottom{display:none;width:320px;height:100px;}
 
 /* ── SITE HEADER ── */
+/* ── MASTER STICKY WRAPPER ── */
+#master-sticky{position:fixed;top:0;left:0;right:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.12);}
+#sticky-spacer{display:block;}
+
 .site-header{background:var(--teal);color:#fff;}
 .header-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
 .logo{display:flex;align-items:center;gap:.6rem;}
@@ -266,8 +270,8 @@ footer a{color:#b2dfdb;}
 .ee-hdr a{color:#b2dfdb;}
 .ee-body{background:var(--wh);border:1px solid var(--grl);border-top:none;border-radius:0 0 10px 10px;padding:.8rem .95rem;}
 
-/* ── STICKY RETAINER (disclaimer + nav pinned after top ad) ── */
-.sticky-retainer{position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+/* ── STICKY RETAINER (inside master fixed wrapper) ── */
+.sticky-retainer{box-shadow:none;}
 
 /* disc-block inside retainer */
 .disc-block{background:#FFF3E0;border-bottom:1px solid #FFB74D;}
@@ -357,7 +361,8 @@ footer a{color:#b2dfdb;}
 </head>
 <body>
 
-<!-- ── SITE HEADER ── -->
+<!-- ── MASTER STICKY WRAPPER: header + ad + thank-you + nav all locked ── -->
+<div id="master-sticky">
 <div class="site-header">
   <div class="header-inner">
     <!-- Tool branding -->
@@ -415,6 +420,11 @@ footer a{color:#b2dfdb;}
   </div>
 
 </div>
+
+</div><!-- /#master-sticky -->
+
+<!-- spacer so content doesn't hide under fixed header stack -->
+<div id="sticky-spacer"></div>
 
 <!-- ══════════════════ PNP PANEL ══════════════════ -->
 <div id="panel-pnp" class="calc-panel">
@@ -1581,7 +1591,16 @@ function ppReset(){
 }
 (function(){$('pp-app-date').value=new Date().toISOString().split('T')[0];ppRenderTrips();})();
 
-// ── DYNAMIC DATES ──
+// ── STICKY SPACER: match spacer height to fixed master wrapper ──
+(function setSpacer(){
+  const wrapper = document.getElementById('master-sticky');
+  const spacer  = document.getElementById('sticky-spacer');
+  function update(){ if(wrapper && spacer) spacer.style.height = wrapper.offsetHeight + 'px'; }
+  update();
+  window.addEventListener('resize', update);
+  // also re-measure after fonts/images load
+  window.addEventListener('load', update);
+})();
 (function(){
   const now = new Date();
   const year = now.getFullYear();
